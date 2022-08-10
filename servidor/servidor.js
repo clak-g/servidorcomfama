@@ -8,6 +8,7 @@ export class servidor{
 
     constructor(){
         this.app = express() //atributo, una variable
+        this.atenderPeticiones()
     }
 
     atenderPeticiones(){    //enrutar peticiones

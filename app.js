@@ -2,6 +2,8 @@
 
 import{servidor} from './servidor/servidor.js'
 
+
+import 'dotenv/config'
 //para utilizar una clase la debo instanciar 
 //para usar una clase debo crear un objeto
 //para usar una clase le debo sacar copia
