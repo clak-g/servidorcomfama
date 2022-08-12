@@ -16,8 +16,8 @@ export class servidor{
     }
 
     encenderServidor(){
-        this.app.listen(3000,function(){
-            console.log("servidor encendido")
+        this.app.listen(process.env.port,function(){
+            console.log("servidor encendido"+process.env.port)
         })
     }
 }
