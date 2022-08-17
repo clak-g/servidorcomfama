@@ -17,4 +17,4 @@ let servidorComfama= new servidor()
 //ENCIENDO EL SERVIDOR
 servidorComfama.encenderServidor()
 
-console.log(process.env.port) // remove this after you've confirmed it workin
+console.log(process.env.PORT) // remove this after you've confirmed it workin

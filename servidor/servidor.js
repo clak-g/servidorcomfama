@@ -8,16 +8,22 @@ export class servidor{
 
     constructor(){
         this.app = express() //atributo, una variable
+        this.habilitarBody()
         this.atenderPeticiones()
     }
 
     atenderPeticiones(){    //enrutar peticiones
+        
         this.app.use('/',rutas)
     }
 
+    habilitarBody(){
+        this.app.use(express.json())
+    }
+
     encenderServidor(){
-        this.app.listen(process.env.port,function(){
-            console.log("servidor encendido"+process.env.port)
+        this.app.listen(process.env.PORT,function(){
+            console.log("servidor encendido"+process.env.PORT)
         })
     }
 }
