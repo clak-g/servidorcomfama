@@ -39,7 +39,7 @@ export class ControllerHabitacion{
         }
         //agregar habitacion
         agregarHabitacion(request, response){
-            let cuerpo = request.params.body
+            let cuerpo = request.body
             console.log(cuerpo)
             try{
                 response.status(200).json({
@@ -55,10 +55,19 @@ export class ControllerHabitacion{
         }
     
         //editar habitacion
-        editarHabitacion(request, response){try{
+        editarHabitacion(request, response){
+            
+
+            //recibir id como parametro
+            let id = request.params.id
+
+            //recibir los datos con los que voy a editar
+            let datos = request.body
+            try{
             response.status(200).json({
-                mensaje:"exito en la consulta",
-                    datos:["Habitacion1","200USD","tv por cable"]
+                mensaje: "exito editando la habitacion" + id,
+                datos: datos
+                
             })
         }catch(error){ //fallo resolviendo la peticion
             

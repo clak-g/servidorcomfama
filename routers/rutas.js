@@ -18,7 +18,7 @@ rutas.get('/viajescomfama/v1/habitacion/:id',contoladorHabitacion.buscarHabitaci
 /
 rutas.post('/viajescomfama/v1/habitacion/',contoladorHabitacion.agregarHabitacion)
 /
-rutas.put('/viajescomfama/v1/habitacion/',contoladorHabitacion.editarHabitacion)
+rutas.put('/viajescomfama/v1/habitacion/:id',contoladorHabitacion.editarHabitacion)
 
 //ENDPOINTS PARA LOS SERVICIOS ASOCIADOS A LAS RESERVAS
 
